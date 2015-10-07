@@ -1,10 +1,4 @@
-<style type="text/css">
-	.markdown-body h4 { font-size: 1.3em; color: #333333; padding: 0; margin: 50px 0 0 0; }
-	.markdown-body h5 { font-size: 1em; color: #215681; padding: 0; margin: 30px 0 0 0; }
-	.markdown-body h6 { font-size: 1em; color: #215681; padding: 0; margin: 0; }
-</style>
-
-![Spark Boulder](spark-boulder.png){:width="270px"}
+![Spark Boulder](spark-boulder.png)
 
 # Front-end Web Development: Syllabus
 
@@ -25,7 +19,7 @@ This course will be taught using a lecture/lab format. In class instruction is t
    f. JavaScript
 
 #### Course Breakdown (Weekly Schedule):
-###### Week 1:
+##### Week 1:
 Introduction to github/git, slack, sublime text, terminal, and other related tools. ___Focus___: HTML and CSS, intro to basic JavaScript and jQuery
 <em>`Lecture:` 1.5 hours &nbsp;&nbsp; `Lab & Hands-on:` 4.0 hours</em>
 
