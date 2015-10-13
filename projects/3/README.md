@@ -53,3 +53,7 @@ In the **example** folder within this project directory, you can see a finished 
 Please make sure all of your work is created within the **deliverables folder**.
 
 #### Topics Covered:
+1. HTML
+2. CSS
+3. Javascript
+
