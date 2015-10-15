@@ -3,6 +3,7 @@
 <head>
 	<title>Project 3: Landing Page</title>
 	<link rel="stylesheet" type="text/css" href="assets/projectect3style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 <div class="row"> 
@@ -32,22 +33,9 @@
 	</select>
 
 	<select name="day">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-		<option value="11">11</option>
-		<option value="12">12</option>
 	</select>
 
 	<select name="year">
-		<option value="1994">1994</option>
 	</select>
 
 	<label>Are you 21?</label>
@@ -55,7 +43,25 @@
 	<input type="radio" name="over21" value="no">No
 
 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+	<script type="text/javascript">
+	$(function(){
+
+		var minYear = new Date().getFullYear() - 18,
+		    day = $('select[name="day"]'),
+		    year = $('select[name="year"]');
+
+		for(var i = 1; i <= 31; i++){
+			day.append( $("<option></option>").attr("value", i).text(i) );
+		};
+
+		for( ; minYear >= 1920; minYear--){
+			year.append( $("<option></option>").attr("value", minYear).text(minYear) );
+		};
+
+	});
+	</script>
 
 </form>
 </body>
