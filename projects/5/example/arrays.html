@@ -13,15 +13,15 @@
 
   <script type="text/javascript">
 
-    describe('Array\'s', function(){
+    describe("Array's", function(){
 
       it("array literal syntax and indexing", function() {
           var favouriteThings = ["cellar door", 42, true]; // note that array elements do not have to be of the same type
 
-          expect(favouriteThings[0]).toEqual('___') // what is in the first position of the array?
+          expect(favouriteThings[0]).toEqual("cellar door") // what is in the first position of the array?
           expect(favouriteThings[1]).toEqual(42) // what is in the second position of the array?
-          expect(favouriteThings[2]).toEqual('___') // what is in the third position of the array?
-          expect(favouriteThings[3]).toEqual('___') // what is in the fourth position of the array?
+          expect(favouriteThings[2]).toEqual(true) // what is in the third position of the array?
+          expect(favouriteThings[3]).toEqual(undefined) // what is in the fourth position of the array?
       });
 
       it("array type", function() {
@@ -60,6 +60,7 @@
           expect(queue.length).toEqual('___') // what will be the length of the queue array?
           expect(queue.shift()).toEqual('___') // what will be shifted out first?
           expect(queue.shift()).toEqual('___')  // what will be shifted out second?
+          expect(queue.length).toEqual('___') // what will be the length of the queue array?
       });
 
     });
