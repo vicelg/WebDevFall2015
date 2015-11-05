@@ -1,25 +1,147 @@
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <head>
-	<title>Project 3: Landing Page - My Awesome Yo-Yo [Bootstrapped]</title>
+	<title>Project 3: Landing Page - My Coffee Rewards[Bootstrapped]</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style_bootstrap.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
 </head>
 <body>
-	<div class="container-fluid" style="background-color:green;"><h1>THIS IS A CONTAINER-FLUID</h1></div>
-	
-	<div class="col-lg-8 col-md-8 col-sm-4 col-xs-12" style="background-color:red;">
-	<h2>This is a column</h2></div>
 
-	<div class="col-lg-8 col-md-8 col-sm-4 col-xs-12" style="background-color:blue;"><h2>This is a column</h2></div>
+
+<div class="container-fluid">
+	
+	<!-- Header Image -->
+	
 	
 
-	<footer class="col-lg-4 col-md-4 col-xs-2" style="background-color:yellow "><h3>FOOTER</h3></footer>
+
+	<div id="header" class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<ul>
+  				<li><a href="default.asp"><span>Home</span></a></li>
+  				<li><a href="news.asp"><span>News</span></a></li>
+  				<li><a href="contact.asp"><span>Contact</span></a></li>
+  				<li><a href="about.asp"><span>About</span></a></li>
+			</ul>
+		</div>
+		<img class="img-responsive" src="assets/images/coffee.jpg">	
+	</div>
+
+	<!-- 
+		Bootstrap grid system:
+		classes: 
+		    xs (phones)
+			sm (tablets)
+			md (desktops)
+			lg (larger desktops)
+	 -->
+
+	<div id="content-section" class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<h1>My Coffee Rewards</h1>
+			<h4>Get rewarded for what you love!</h4>
+				<!-- Image -->
+			<img src="assets/images/card.jpg">
+		</div>
+		
+				<!-- Paragraph -->
+		<div class="col-md-3 col-md-3 col-xs-12">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut efficitur ipsum, eu mollis tellus. Nunc mollis purus a eros viverra, eu viverra quam consectetur. Suspendisse eleifend id sapien nec porta.</p>
+		</div>
+	
+		
+
+		<div class="col-md-5 col-sm-5 col-xs-12">
+				<h4>Form</h4>
+				<form id="cta">
+					<input class="tf name no-margin" type="text" name="firstname" placeholder="First name">
+					<input class="tf name no-margin" type="text" name="lastname" placeholder="Last name">
+					<input class="tf" type="email" name="emailaddress" placeholder="Email address">
+					
+					<label>Date of Birth</label>
+					
+					<select name="month">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select> / 
+					<select name="day"></select> /
+					<select name="year"></select>
+					<format>month/day/year</format>
+
+					<!-- <input type="date"> -->
+
+					<label>Do you drink coffee everyday?</label>
+					<input type="radio" name="over21" value="yes">Yes
+					<input type="radio" name="over21" value="no">No
+
+					<br>
+
+					<label>Select your favorite roast:</label>
+					<input type="checkbox" name="favColors" value="red">Blonde
+					<input type="checkbox" name="favColors" value="blue">Medium
+					<input type="checkbox" name="favColors" value="green">Dark
+
+					<br>
+
+					<input class="submitBtn" type="submit" value="Sign Up">	
+				</form>
+		</div>
+	</div>
+
+		<div id="feature-section1" class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+		
+				<h4>Feature 1</h4>
+				<ul>
+					<li></li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+		
+		
+			<div id="feature-section2" class="col-md-8 col-sm-6 col-xs-12">
+				<img class="img-mobile" src="assets/images/iphone.png">
+			</div>
+			
+			<div id="footer" class="col-md-12 col-sm-12 col-xs-12">
+				<h4 style="background-color: #998031;">Footer</h4>
+			</div>
+		</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+
+		var minYear = new Date().getFullYear() - 18,
+		    day = $('select[name="day"]'),
+		    year = $('select[name="year"]');
+
+		for(var i = 1; i <= 31; i++){
+			day.append( $("<option></option>").attr("value", i).text(i) );
+		};
+
+		for( ; minYear >= 1920; minYear--){
+			year.append( $("<option></option>").attr("value", minYear).text(minYear) );
+		};
+
+	});
+	</script>
+
+
 </body>
-
-
 </html>
